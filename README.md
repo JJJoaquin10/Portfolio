@@ -133,7 +133,7 @@ Python, NLP, Azure OpenAI, embeddings, AI integrations
 # 📫 Contact Me
 📧 Email: jimenezserranojj03@gmail.com  
 🔗 LinkedIn: https://www.linkedin.com/in/joséjoaquínjímenéz  
-💻 GitHub: https://github.com/JJoaquin10  
+💻 GitHub: https://github.com/JJJoaquin10  
 
 ---
 
