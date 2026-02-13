@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jose Joaquin Jimenez Serrano | Software Engineer & Cybersecurity Specialist</title>
+  <title>José Joaquín Jiménez Serrano | Full Stack Developer (Security-Focused)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Jose Joaquin Jimenez Serrano - Software Engineer, AI Developer, and Cybersecurity Specialist." />
+  <meta name="description" content="Engineering portfolio of José Joaquín Jiménez Serrano — Full Stack Developer focused on secure, scalable systems with .NET, React Native, and SQL Server." />
 
   <style>
     :root {
@@ -15,87 +15,48 @@
       --text-main: #f5f5f7;
       --text-soft: #a1a1aa;
       --border-subtle: #27272f;
-      --pill-bg: #111119;
-      --danger: #ff5470;
       --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.55);
       --radius-xl: 24px;
       --radius-pill: 999px;
       --transition: 200ms ease-out;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #10101a 0, #050508 55%);
       color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 20px 64px;
-    }
+    .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; margin-bottom: 32px;
     }
 
     .logo-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 18px;
+      width: 40px; height: 40px; border-radius: 18px;
       background: radial-gradient(circle at 30% 0, #ffffff 0, #d3e2ff 40%, #4f8cff 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #050508;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #050508;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      user-select: none;
     }
 
-    nav {
-      display: flex;
-      gap: 18px;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    nav a {
-      position: relative;
-      padding-bottom: 4px;
-    }
-
+    nav { display: flex; gap: 18px; font-size: 0.9rem; color: var(--text-soft); }
+    nav a { position: relative; padding-bottom: 4px; }
     nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: linear-gradient(90deg, var(--accent), #9b8cff);
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 1px; background: linear-gradient(90deg, var(--accent), #9b8cff);
       transition: width var(--transition);
     }
-
-    nav a:hover::after {
-      width: 100%;
-    }
+    nav a:hover::after { width: 100%; }
 
     .pill {
       border-radius: var(--radius-pill);
@@ -104,24 +65,18 @@
       background: rgba(24, 24, 36, 0.95);
       border: 1px solid rgba(120, 120, 150, 0.4);
       color: var(--text-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-flex; align-items: center; gap: 6px;
     }
 
     .pill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.2);
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4ade80; box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.2);
     }
 
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
-      gap: 32px;
-      align-items: center;
+      gap: 32px; align-items: center;
       margin-bottom: 40px;
     }
 
@@ -134,37 +89,21 @@
     .hero-subtitle {
       font-size: 1.02rem;
       color: var(--text-soft);
-      max-width: 520px;
+      max-width: 560px;
       margin-bottom: 18px;
     }
 
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 
     .btn {
       border-radius: var(--radius-pill);
       padding: 10px 20px;
       border: 1px solid transparent;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.9rem; font-weight: 600;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--text-main);
-      transition: background var(--transition), border var(--transition),
-        transform var(--transition), box-shadow var(--transition);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--text-main);
+      transition: background var(--transition), border var(--transition), transform var(--transition), box-shadow var(--transition);
     }
 
     .btn-primary {
@@ -173,20 +112,16 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
-    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65); }
 
     .btn-ghost {
       border-color: rgba(120, 120, 150, 0.7);
       background: rgba(10, 10, 20, 0.9);
     }
 
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      background: rgba(20, 20, 32, 0.9);
-    }
+    .btn-ghost:hover { border-color: var(--accent); background: rgba(20, 20, 32, 0.9); }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
     .hero-card {
       border-radius: var(--radius-xl);
@@ -197,36 +132,19 @@
       font-size: 0.88rem;
     }
 
-    .hero-card h3 {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
+    .hero-card h3 { font-size: 0.95rem; margin-bottom: 10px; }
 
-    .hero-metadata {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
+    .hero-metadata { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .hero-metadata span {
       border-radius: var(--radius-pill);
       padding: 4px 10px;
       background: rgba(15, 15, 25, 0.95);
       border: 1px solid rgba(70, 70, 100, 0.7);
-      font-size: 0.78rem;
-      color: var(--text-soft);
+      font-size: 0.78rem; color: var(--text-soft);
     }
 
-    main {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
-      gap: 32px;
-    }
-
-    section {
-      margin-bottom: 32px;
-    }
+    main { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr); gap: 32px; }
+    section { margin-bottom: 32px; }
 
     .section-title {
       font-size: 1rem;
@@ -243,603 +161,3 @@
       border: 1px solid var(--border-subtle);
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
     }
-
-    .card + .card {
-      margin-top: 14px;
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-      gap: 12px;
-    }
-
-    .card-title {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .card-subtitle {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-    }
-
-    .pill-soft {
-      border-radius: var(--radius-pill);
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      color: var(--accent);
-      background: var(--accent-soft);
-      border: 1px solid rgba(79, 140, 255, 0.5);
-      white-space: nowrap;
-    }
-
-    .card-body {
-      font-size: 0.86rem;
-      color: var(--text-soft);
-      margin-top: 10px;
-    }
-
-    .bullet-list {
-      list-style: none;
-      margin-top: 10px;
-    }
-
-    .bullet-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .bullet-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      margin-top: 6px;
-      background: rgba(148, 163, 184, 0.9);
-      flex-shrink: 0;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .tag {
-      border-radius: var(--radius-pill);
-      padding: 3px 9px;
-      font-size: 0.72rem;
-      color: #e5e7eb;
-      background: rgba(17, 24, 39, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-    }
-
-    .tag-soft {
-      border-color: rgba(75, 85, 99, 0.7);
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text-soft);
-    }
-
-    .projects-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .project-card {
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-      background: rgba(9, 9, 16, 0.95);
-      border: 1px solid rgba(45, 55, 72, 0.9);
-      transition: transform var(--transition), box-shadow var(--transition),
-        border var(--transition), background var(--transition);
-    }
-
-    .project-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
-      background: radial-gradient(circle at top left, #111827 0, #050508 65%);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-
-    .project-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .project-role {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .project-body {
-      font-size: 0.84rem;
-      color: var(--text-soft);
-      margin-top: 4px;
-    }
-
-    .project-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 8px;
-      font-size: 0.8rem;
-    }
-
-    .link-soft {
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .link-soft span {
-      font-size: 0.9em;
-    }
-
-    .two-col-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 6px 14px;
-      margin-top: 8px;
-      font-size: 0.82rem;
-      color: var(--text-soft);
-    }
-
-    .footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(55, 65, 81, 0.8);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 14px;
-      font-size: 0.82rem;
-      color: var(--text-soft);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .badge-inline {
-      border-radius: var(--radius-pill);
-      padding: 3px 9px;
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      font-size: 0.72rem;
-      color: var(--text-soft);
-    }
-
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding-inline: 16px;
-      }
-
-      nav {
-        display: none;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div style="display:flex; align-items:center; gap:12px;">
-        <div class="logo-mark">JJ</div>
-        <div>
-          <div style="font-size:0.96rem; font-weight:600;">Jose Joaquin Jimenez Serrano</div>
-          <div style="font-size:0.8rem; color:var(--text-soft);">
-            Software Engineer • AI Developer • Cybersecurity Specialist
-          </div>
-        </div>
-      </div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="pill" style="margin-bottom:10px;">
-          <span class="pill-dot"></span>
-          Open to Remote Roles (LATAM / US-friendly)
-        </div>
-
-        <h1 class="hero-title">
-          Backend & AI-focused Software Engineer with a strong cybersecurity mindset.
-        </h1>
-
-        <p class="hero-subtitle">
-          I design and build secure, scalable applications using .NET, Node.js, SQL, and modern cloud & AI services.
-          Currently finishing my Computer Systems Engineering degree and specializing in Cybersecurity.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Backend Development (.NET, Node.js)</span>
-          <span class="tag">APIs & Databases</span>
-          <span class="tag">AI Integrations</span>
-          <span class="tag tag-soft">Cybersecurity & Secure Design</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary">
-            Download CV
-          </a>
-          <a href="#contact" class="btn btn-ghost">
-            Contact me
-          </a>
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <h3>Quick Snapshot</h3>
-        <div class="card-body">
-          <p>
-            •  Software Engineer focused on backend, APIs, and secure cloud solutions.<br />
-            •  1 quarter left to complete my <strong>Bachelor’s in Computer Systems Engineering</strong> at
-            Universidad Latina de Costa Rica.<br />
-            •  <strong>Cybersecurity Specialist</strong> at Universidad Fidélitas (offensive & defensive security).
-          </p>
-
-          <div class="hero-metadata">
-            <span>Based in Costa Rica</span>
-            <span>Open to remote roles</span>
-            <span>B2+ English</span>
-            <span>GitHub: <strong>JJoaquin10</strong></span>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <main>
-      <!-- LEFT COLUMN -->
-      <div>
-        <!-- ABOUT -->
-        <section id="about">
-          <div class="section-title">About Me</div>
-          <div class="card">
-            <div class="card-body">
-              I am a highly motivated and fast-learning Software Engineer with hands-on experience designing and
-              building secure backend services, APIs, and AI-powered applications. I enjoy taking ideas from concept to
-              production: defining the architecture, implementing the backend, integrating AI, and making sure
-              everything is observable, secure, and maintainable.
-              <br /><br />
-              I combine three core strengths:
-              <ul class="bullet-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>Backend & Cloud:</strong> .NET 6+, ASP.NET Web API, Node.js, SQL Server, PostgreSQL,
-                    REST APIs, authentication & authorization, JWT, and CI/CD basics.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>AI Development:</strong> Python for AI, NLP, prompt engineering, and integration of
-                    AI models into real applications (.NET / JS).</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>Cybersecurity:</strong> secure design, web application security, network fundamentals,
-                    and hands-on labs in offensive & defensive techniques.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-          <div class="section-title">Selected Projects</div>
-          <div class="card">
-            <div class="projects-grid">
-              <!-- AlertaCR -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">AlertaCR – Citizen Safety Mobile App</div>
-                    <div class="project-role">Full-Stack Lead • React Native & .NET API</div>
-                  </div>
-                  <span class="pill-soft">In Progress</span>
-                </div>
-                <p class="project-body">
-                  Full-stack mobile application focused on public safety in Costa Rica. Users can trigger SOS panic
-                  alerts, report incidents, view dynamic risk maps, and follow safe routes powered by geolocation.
-                  I led the architecture, backend design, and coordination of the development team.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">React Native (TypeScript)</span>
-                  <span class="tag">.NET 6 Web API</span>
-                  <span class="tag">SQL Server</span>
-                  <span class="tag tag-soft">JWT Auth</span>
-                  <span class="tag tag-soft">REST APIs</span>
-                  <span class="tag tag-soft">Maps & Geolocation</span>
-                </div>
-                <div class="project-links">
-                  <span class="link-soft">
-                    <span>Repository: coming soon</span>
-                  </span>
-                </div>
-              </article>
-
-              <!-- Barber shop project -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">Barbershop Management System</div>
-                    <div class="project-role">Backend & Web Developer</div>
-                  </div>
-                  <span class="pill-soft">Web App</span>
-                </div>
-                <p class="project-body">
-                  Management system for a local barbershop including appointments, client records, services, and basic
-                  reporting. Focused on clean architecture, reusability, and secure data access.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">ASP.NET MVC / Web API</span>
-                  <span class="tag">C#</span>
-                  <span class="tag">SQL Server</span>
-                  <span class="tag tag-soft">Repository Pattern</span>
-                </div>
-              </article>
-
-              <!-- TCU / Foundation website -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">Fundación Curridabat – Web Platform</div>
-                    <div class="project-role">Full-Stack Developer • University TCU</div>
-                  </div>
-                  <span class="pill-soft">Social Impact</span>
-                </div>
-                <p class="project-body">
-                  Web platform for a non-profit foundation to manage courses, registrations, and volunteers. Included
-                  a modern responsive UI, backend CRUD services, and a relational database designed from scratch.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">HTML, CSS, JS</span>
-                  <span class="tag">.NET / SQL</span>
-                  <span class="tag tag-soft">Courses & Enrollment</span>
-                </div>
-              </article>
-
-              <!-- Cybersecurity labs -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">Cybersecurity Labs & Simulations</div>
-                    <div class="project-role">Cybersecurity Specialist Program</div>
-                  </div>
-                  <span class="pill-soft">Security</span>
-                </div>
-                <p class="project-body">
-                  Hands-on labs covering network security, firewall policies, web application security, and incident
-                  response. Included practical work with tools for traffic inspection, vulnerability scanning, and
-                  secure configuration.
-                </p>
-                <div class="tag-row">
-                  <span class="tag tag-soft">Network Security</span>
-                  <span class="tag tag-soft">OWASP concepts</span>
-                  <span class="tag tag-soft">Firewalls</span>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <aside>
-        <!-- SKILLS -->
-        <section id="skills">
-          <div class="section-title">Skills</div>
-          <div class="card">
-            <div class="card-header">
-              <span class="card-title">Technical Stack</span>
-              <span class="badge-inline">Constantly learning & improving</span>
-            </div>
-            <div class="card-body">
-              <strong>Backend & APIs</strong>
-              <div class="two-col-list">
-                <span>.NET 6+, ASP.NET Web API</span>
-                <span>C#</span>
-                <span>Node.js & Express</span>
-                <span>RESTful API design</span>
-                <span>Authentication & JWT</span>
-                <span>Clean architecture basics</span>
-              </div>
-
-              <br />
-              <strong>Databases & Cloud</strong>
-              <div class="two-col-list">
-                <span>SQL Server, PostgreSQL</span>
-                <span>Database modeling</span>
-                <span>Stored procedures & triggers</span>
-                <span>Azure basics (Functions, App Service, Blob)</span>
-              </div>
-
-              <br />
-              <strong>AI & Automation</strong>
-              <div class="two-col-list">
-                <span>Python for AI</span>
-                <span>NLP & prompt engineering</span>
-                <span>AI integrations with .NET / JS</span>
-                <span>API-based AI services</span>
-              </div>
-
-              <br />
-              <strong>Cybersecurity</strong>
-              <div class="two-col-list">
-                <span>Secure coding practices</span>
-                <span>Web application security</span>
-                <span>Network & firewall fundamentals</span>
-                <span>OWASP-style thinking</span>
-              </div>
-
-              <br />
-              <strong>DevOps & Tools</strong>
-              <div class="two-col-list">
-                <span>Git & GitHub</span>
-                <span>GitHub Actions basics</span>
-                <span>VS / VS Code</span>
-                <span>Postman, Swagger</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-          <div class="section-title">Experience</div>
-          <div class="card">
-            <!-- Freelance -->
-            <div class="card-header">
-              <div>
-                <div class="card-title">Software & AI Freelance Developer</div>
-                <div class="card-subtitle">Self-employed • 2023 – Present</div>
-              </div>
-              <span class="pill-soft">Remote</span>
-            </div>
-            <div class="card-body">
-              <ul class="bullet-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Design and build small systems and prototypes for local clients, from data models to
-                    deployment.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Integrate AI capabilities into .NET / JavaScript applications using external APIs.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Advise on basic security, data protection, and best practices for new projects.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- AlertaCR -->
-            <div class="card-header" style="margin-top:14px;">
-              <div>
-                <div class="card-title">AlertaCR – Full-Stack Mobile App (Team Project)</div>
-                <div class="card-subtitle">Technical Lead • 2024 – Present</div>
-              </div>
-              <span class="pill-soft">University / Startup-style</span>
-            </div>
-            <div class="card-body">
-              <ul class="bullet-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Owned the backend architecture, designing REST APIs, database schema, and security
-                    mechanisms.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Coordinated a small team working on React Native front-end, API integration, and QA.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span>Applied secure design principles, role-based access, and proper error handling and logging.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section id="education">
-          <div class="section-title">Education</div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">B.Sc. Computer Systems Engineering</div>
-                <div class="card-subtitle">Universidad Latina de Costa Rica • 1 quarter left</div>
-              </div>
-              <span class="pill-soft">Expected 2025</span>
-            </div>
-            <div class="card-body">
-              Focus on software engineering, databases, networks, operating systems, mobile development, and project
-              management. Led several team projects with real-world requirements.
-            </div>
-
-            <div class="card-header" style="margin-top:14px;">
-              <div>
-                <div class="card-title">Cybersecurity Specialist</div>
-                <div class="card-subtitle">Universidad Fidélitas • Completed</div>
-              </div>
-              <span class="pill-soft">Security</span>
-            </div>
-            <div class="card-body">
-              Program focused on offensive and defensive security, network protection, incident response, and secure
-              infrastructure design.
-            </div>
-          </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-          <div class="section-title">Contact</div>
-          <div class="card">
-            <div class="card-body">
-              I’m open to <strong>Junior / Trainee / Entry-Level roles</strong> in backend development, AI-powered
-              applications, or cybersecurity-aware software engineering — especially remote positions across
-              LATAM or US-friendly time zones.
-              <br /><br />
-              <div class="two-col-list">
-                <span><strong>Email:</strong> <a href="mailto:jimenezserranojj03@gmail.com">jimenezserranojj03@gmail.com</a></span>
-                <span><strong>Location:</strong> Heredia, Costa Rica</span>
-                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joséjoaquínjiménez" target="_blank">View profile</a></span>
-                <span><strong>GitHub:</strong> <a href="https://github.com/JJJoaquin10" target="_blank">@JJJoaquin10</a></span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </aside>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>© 2025 Jose Joaquin Jimenez Serrano. All rights reserved.</div>
-      <div class="footer-links">
-        <span class="badge-inline">Building secure, AI-powered backend systems.</span>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
