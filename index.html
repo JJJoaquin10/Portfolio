@@ -161,3 +161,466 @@
       border: 1px solid var(--border-subtle);
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
     }
+
+    .card + .card { margin-top: 14px; }
+
+    .card-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 6px; gap: 12px;
+    }
+
+    .card-title { font-size: 0.98rem; font-weight: 700; }
+    .card-subtitle { font-size: 0.82rem; color: var(--text-soft); }
+
+    .pill-soft {
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid rgba(79, 140, 255, 0.5);
+      white-space: nowrap;
+    }
+
+    .card-body { font-size: 0.9rem; color: var(--text-soft); margin-top: 10px; }
+
+    .bullet-list { list-style: none; margin-top: 10px; }
+    .bullet-list li { display: flex; align-items: flex-start; gap: 8px; margin-top: 6px; }
+    .bullet-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      margin-top: 7px; background: rgba(148, 163, 184, 0.9); flex-shrink: 0;
+    }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag {
+      border-radius: var(--radius-pill);
+      padding: 3px 9px;
+      font-size: 0.72rem;
+      color: #e5e7eb;
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+    .tag-soft {
+      border-color: rgba(75, 85, 99, 0.7);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-soft);
+    }
+
+    .projects-grid { display: flex; flex-direction: column; gap: 12px; }
+
+    .project-card {
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      background: rgba(9, 9, 16, 0.95);
+      border: 1px solid rgba(45, 55, 72, 0.9);
+      transition: transform var(--transition), box-shadow var(--transition), border var(--transition), background var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      background: radial-gradient(circle at top left, #111827 0, #050508 65%);
+    }
+
+    .project-header { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+    .project-title { font-size: 0.98rem; font-weight: 800; }
+    .project-role { font-size: 0.78rem; color: var(--text-soft); }
+    .project-body { font-size: 0.88rem; color: var(--text-soft); margin-top: 4px; }
+
+    .project-links { display: flex; align-items: center; gap: 12px; margin-top: 8px; font-size: 0.82rem; }
+    .link-soft { color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
+    .link-soft span { font-size: 0.95em; }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 14px;
+      margin-top: 8px;
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(55, 65, 81, 0.8);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    .badge-inline {
+      border-radius: var(--radius-pill);
+      padding: 3px 9px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      font-size: 0.72rem;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 900px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .hero { grid-template-columns: 1fr; }
+      main { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding-inline: 16px; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="logo-mark">JJ</div>
+        <div>
+          <div style="font-size:0.98rem; font-weight:800;">José Joaquín Jiménez Serrano</div>
+          <div style="font-size:0.82rem; color:var(--text-soft);">
+            Full Stack Developer • Security-Focused • .NET & React Native
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" style="margin-bottom:10px;">
+          <span class="pill-dot"></span>
+          Open to Remote Roles (Costa Rica / LATAM / US-friendly)
+        </div>
+
+        <h1 class="hero-title">
+          Full Stack Developer focused on secure, scalable systems and real-world mobile/web products.
+        </h1>
+
+        <p class="hero-subtitle">
+          I build security-first applications using React Native, .NET, and SQL Server — combining modern engineering
+          with cybersecurity fundamentals (OWASP, IAM, ISO 27001 concepts). Currently developing <strong>ALERTACR</strong>,
+          a citizen-safety platform with real-time incident reporting, geolocation intelligence, SOS alerts, and AI-assisted recommendations.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">React Native (TypeScript)</span>
+          <span class="tag">.NET / ASP.NET Web API</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Secure APIs (JWT, RBAC)</span>
+          <span class="tag tag-soft">Security-first mindset</span>
+        </div>
+
+        <div class="hero-actions">
+          <!-- Replace href with your PDF path once uploaded to this repo -->
+          <a href="#contact" class="btn btn-primary">
+            Contact / CV
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Quick Snapshot</h3>
+        <div class="card-body">
+          <p>
+            • Full Stack Developer specializing in secure backend engineering, scalable APIs, and real-world mobile platforms.<br />
+            • Systems Engineering student at <strong>Universidad Latina de Costa Rica</strong>.<br />
+            • <strong>Cybersecurity Specialization</strong> (Universidad Fidélitas) — security-first development mindset.
+          </p>
+
+          <div class="hero-metadata">
+            <span>Based in Costa Rica</span>
+            <span>Open to remote roles</span>
+            <span>C1 English</span>
+            <span>GitHub: <strong>JJoaquin10</strong></span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- ABOUT -->
+        <section id="about">
+          <div class="section-title">About Me</div>
+          <div class="card">
+            <div class="card-body">
+              I’m a Full Stack Developer with a security-first mindset, focused on building scalable, maintainable, and real-world applications.
+              I enjoy owning end-to-end systems: architecture, APIs, databases, and modern mobile/web experiences — always applying secure design principles.
+              <br /><br />
+              Core strengths:
+              <ul class="bullet-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span><strong>Full Stack Engineering:</strong> React Native (TypeScript), .NET / ASP.NET Web API, JavaScript, and modern architecture patterns.</span>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span><strong>Backend & Data:</strong> secure REST APIs, authentication (JWT), RBAC, SQL Server data modeling, and performance-minded database design.</span>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span><strong>Security-Oriented Development:</strong> OWASP-style thinking, IAM fundamentals, risk analysis, and ISO 27001 concepts applied to software design.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+          <div class="section-title">Selected Projects</div>
+          <div class="card">
+            <div class="projects-grid">
+
+              <!-- ALERTACR -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <div class="project-title">ALERTACR — Citizen Safety Mobile Platform</div>
+                    <div class="project-role">Full-Stack Lead • React Native & .NET API</div>
+                  </div>
+                  <span class="pill-soft">In Progress</span>
+                </div>
+
+                <p class="project-body">
+                  Citizen-safety mobile platform under active development. Users can report incidents in real time,
+                  trigger SOS emergency alerts, share live location with trusted contacts, and visualize risk through heatmaps.
+                  The roadmap includes AI-assisted incident guidance (PulseAI).
+                </p>
+
+                <div class="tag-row">
+                  <span class="tag">React Native (TypeScript)</span>
+                  <span class="tag">.NET Web API</span>
+                  <span class="tag">SQL Server</span>
+                  <span class="tag tag-soft">JWT</span>
+                  <span class="tag tag-soft">RBAC</span>
+                  <span class="tag tag-soft">Maps & Geolocation</span>
+                </div>
+
+                <div class="project-links">
+                  <span class="link-soft"><span>Repository:</span> coming soon</span>
+                </div>
+              </article>
+
+              <!-- FUNDACIÓN CURRIDABAT -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <div class="project-title">Fundación Curridabat — Information Management Platform</div>
+                    <div class="project-role">Full Stack Web Developer • Systems Analyst</div>
+                  </div>
+                  <span class="pill-soft">Social Impact</span>
+                </div>
+
+                <p class="project-body">
+                  Secure full-stack web platform supporting internal operations, program management, and community services.
+                  Built backend workflows, role-based access, and optimized SQL structures to ensure performance and integrity.
+                </p>
+
+                <div class="tag-row">
+                  <span class="tag">React</span>
+                  <span class="tag">.NET</span>
+                  <span class="tag">SQL Server</span>
+                  <span class="tag tag-soft">RBAC</span>
+                  <span class="tag tag-soft">Workflows</span>
+                </div>
+              </article>
+
+              <!-- CYBERSECURITY LABS -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <div class="project-title">Cybersecurity Labs & Simulations</div>
+                    <div class="project-role">Cybersecurity Specialization (Universidad Fidélitas)</div>
+                  </div>
+                  <span class="pill-soft">Security</span>
+                </div>
+
+                <p class="project-body">
+                  Hands-on labs covering network security fundamentals, secure configuration, and web security concepts.
+                  Focused on understanding threats and applying preventive controls to improve system resilience.
+                </p>
+
+                <div class="tag-row">
+                  <span class="tag tag-soft">Security Fundamentals</span>
+                  <span class="tag tag-soft">Secure Configuration</span>
+                  <span class="tag tag-soft">OWASP Concepts</span>
+                  <span class="tag tag-soft">Networking</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <!-- SKILLS -->
+        <section id="skills">
+          <div class="section-title">Skills</div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Technical Stack</span>
+              <span class="badge-inline">Security-first • Always improving</span>
+            </div>
+
+            <div class="card-body">
+              <strong>Full Stack</strong>
+              <div class="two-col-list">
+                <span>React / React Native (TypeScript)</span>
+                <span>.NET / ASP.NET Web API</span>
+                <span>JavaScript / TypeScript</span>
+                <span>REST APIs</span>
+              </div>
+
+              <br />
+              <strong>Backend & Data</strong>
+              <div class="two-col-list">
+                <span>SQL Server</span>
+                <span>Database Modeling</span>
+                <span>Stored Procedures</span>
+                <span>Authentication (JWT)</span>
+              </div>
+
+              <br />
+              <strong>Security-Oriented Dev</strong>
+              <div class="two-col-list">
+                <span>Secure API Design</span>
+                <span>RBAC / IAM Concepts</span>
+                <span>OWASP Concepts</span>
+                <span>ISO 27001 Concepts</span>
+              </div>
+
+              <br />
+              <strong>Tools</strong>
+              <div class="two-col-list">
+                <span>Git & GitHub</span>
+                <span>Postman / Swagger</span>
+                <span>VS / VS Code</span>
+                <span>CI/CD Basics</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+          <div class="section-title">Experience</div>
+          <div class="card">
+
+            <div class="card-header">
+              <div>
+                <div class="card-title">Full Stack Web Developer | Systems Analyst</div>
+                <div class="card-subtitle">Fundación Curridabat • Remote</div>
+              </div>
+              <span class="pill-soft">2026 – Present</span>
+            </div>
+
+            <div class="card-body">
+              <ul class="bullet-list">
+                <li><span class="bullet-dot"></span><span>Designed and implemented frontend, backend, and relational database architecture.</span></li>
+                <li><span class="bullet-dot"></span><span>Built backend services for user management and operational workflows.</span></li>
+                <li><span class="bullet-dot"></span><span>Applied security-first practices including role-based access and secure data handling.</span></li>
+                <li><span class="bullet-dot"></span><span>Optimized SQL structures to ensure integrity and performance.</span></li>
+              </ul>
+            </div>
+
+            <div class="card-header" style="margin-top:14px;">
+              <div>
+                <div class="card-title">ALERTACR — Full Stack Developer (Mobile Platform)</div>
+                <div class="card-subtitle">Technical Lead • Team Project</div>
+              </div>
+              <span class="pill-soft">2025 – Present</span>
+            </div>
+
+            <div class="card-body">
+              <ul class="bullet-list">
+                <li><span class="bullet-dot"></span><span>Owned system architecture: mobile frontend, backend APIs, and database design.</span></li>
+                <li><span class="bullet-dot"></span><span>Designed secure authentication and role-based access for the platform.</span></li>
+                <li><span class="bullet-dot"></span><span>Implemented geolocation features and real-time incident reporting foundations.</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+          <div class="section-title">Education</div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">B.Sc. Systems Engineering</div>
+                <div class="card-subtitle">Universidad Latina de Costa Rica</div>
+              </div>
+              <span class="pill-soft">In Progress</span>
+            </div>
+
+            <div class="card-body">
+              Focus on software engineering, databases, networks, operating systems, mobile development, and IT management.
+            </div>
+
+            <div class="card-header" style="margin-top:14px;">
+              <div>
+                <div class="card-title">Cybersecurity Specialization</div>
+                <div class="card-subtitle">Universidad Fidélitas</div>
+              </div>
+              <span class="pill-soft">Completed</span>
+            </div>
+
+            <div class="card-body">
+              Training in cybersecurity fundamentals, risk analysis, and security-first practices aligned with industry frameworks.
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <div class="section-title">Contact</div>
+          <div class="card">
+            <div class="card-body">
+              Open to <strong>Junior / Entry-Level</strong> opportunities where software development, security, and scalable systems intersect.
+              <br /><br />
+              <div class="two-col-list">
+                <span><strong>Email:</strong> <a href="mailto:jimenezserranojj03@gmail.com">jimenezserranojj03@gmail.com</a></span>
+                <span><strong>Location:</strong> Heredia, Costa Rica</span>
+                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener">www.linkedin.com/in/joséjoaquínjiménez</a></span>
+                <span><strong>GitHub:</strong> <a href="https://github.com/JJJoaquin10" target="_blank" rel="noopener">@JJJoaquin10</a></span>
+              </div>
+              <br />
+              <span class="badge-inline">Tip: Add your CV PDF to this repo and link it in the hero button.</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© 2026 José Joaquín Jiménez Serrano.</div>
+      <div class="footer-links">
+        <span class="badge-inline">Building secure, real-world products with .NET, React Native & SQL.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
