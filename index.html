@@ -2,625 +2,1298 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>José Joaquín Jiménez Serrano | Full Stack Developer (Security-Focused)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Engineering portfolio of José Joaquín Jiménez Serrano — Full Stack Developer focused on secure, scalable systems with .NET, React Native, and SQL Server." />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jose Joaquin Jimenez Serrano — Full Stack Developer, Cybersecurity Specialist & AI Developer. Building secure, scalable systems with .NET, React Native, and SQL Server." />
+  <meta name="keywords" content="Full Stack Developer, Cybersecurity, React Native, .NET, SQL Server, Costa Rica, Software Engineer" />
+  <meta property="og:title" content="Jose Joaquin Jimenez Serrano | Full Stack Developer" />
+  <meta property="og:description" content="Building secure, scalable systems and real-world mobile/web products." />
+  <title>Jose Joaquin Jimenez Serrano | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #050508;
-      --bg-elevated: #0d0d12;
-      --accent: #4f8cff;
-      --accent-soft: rgba(79, 140, 255, 0.08);
-      --text-main: #f5f5f7;
-      --text-soft: #a1a1aa;
-      --border-subtle: #27272f;
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.55);
-      --radius-xl: 24px;
-      --radius-pill: 999px;
-      --transition: 200ms ease-out;
+      --bg: #0a0a0f;
+      --bg-card: #111118;
+      --bg-card-hover: #16161f;
+      --accent: #6366f1;
+      --accent-2: #8b5cf6;
+      --accent-glow: rgba(99, 102, 241, 0.15);
+      --accent-border: rgba(99, 102, 241, 0.3);
+      --green: #10b981;
+      --green-soft: rgba(16, 185, 129, 0.1);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --border: #1e1e2e;
+      --border-light: #2a2a3e;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 48px rgba(0,0,0,0.6);
+      --font: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --transition: 0.2s ease;
+      --nav-h: 64px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #10101a 0, #050508 55%);
-      color: var(--text-main);
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
-
-    header {
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
       display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; margin-bottom: 32px;
+      padding: 0 clamp(24px, 5vw, 80px);
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .logo-mark {
-      width: 40px; height: 40px; border-radius: 18px;
-      background: radial-gradient(circle at 30% 0, #ffffff 0, #d3e2ff 40%, #4f8cff 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: #050508;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-      user-select: none;
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
-    nav { display: flex; gap: 18px; font-size: 0.9rem; color: var(--text-soft); }
-    nav a { position: relative; padding-bottom: 4px; }
-    nav a::after {
-      content: ""; position: absolute; left: 0; bottom: 0;
-      width: 0; height: 1px; background: linear-gradient(90deg, var(--accent), #9b8cff);
-      transition: width var(--transition);
-    }
-    nav a:hover::after { width: 100%; }
+    .nav-logo span { color: var(--text-muted); }
 
-    .pill {
-      border-radius: var(--radius-pill);
-      padding: 4px 12px;
-      font-size: 0.8rem;
-      background: rgba(24, 24, 36, 0.95);
-      border: 1px solid rgba(120, 120, 150, 0.4);
-      color: var(--text-soft);
-      display: inline-flex; align-items: center; gap: 6px;
+    .nav-links {
+      display: flex; gap: 8px; list-style: none;
     }
 
-    .pill-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #4ade80; box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.2);
+    .nav-links a {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
     }
 
+    .nav-links a:hover { color: var(--text); background: var(--bg-card); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 7px 18px !important;
+      border-radius: 8px !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-2) !important; color: #fff !important; }
+
+    /* ─── LAYOUT ─── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 48px); }
+
+    section { padding: 96px 0; }
+
+    /* ─── HERO ─── */
     .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
-      gap: 32px; align-items: center;
+      grid-template-columns: 1fr auto;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-soft);
+      border: 1px solid rgba(16,185,129,0.2);
+      color: var(--green);
+      font-size: 12px; font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 7px; height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero-name {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero-name .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-role {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    .hero-role strong { color: var(--text); font-weight: 600; }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.75;
       margin-bottom: 40px;
     }
 
-    .hero-title {
-      font-size: clamp(2.1rem, 3vw, 2.8rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 40px;
     }
 
-    .hero-subtitle {
-      font-size: 1.02rem;
-      color: var(--text-soft);
-      max-width: 560px;
-      margin-bottom: 18px;
+    .tag {
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-border);
+      padding: 5px 12px;
+      border-radius: 6px;
     }
 
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
     .btn {
-      border-radius: var(--radius-pill);
-      padding: 10px 20px;
-      border: 1px solid transparent;
-      font-size: 0.9rem; font-weight: 600;
-      cursor: pointer;
       display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--text-main);
-      transition: background var(--transition), border var(--transition), transform var(--transition), box-shadow var(--transition);
+      font-size: 15px; font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 10px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #9b8cff);
-      color: #050508;
-      box-shadow: var(--shadow-soft);
+      background: var(--accent);
+      color: #fff;
     }
 
-    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65); }
-
-    .btn-ghost {
-      border-color: rgba(120, 120, 150, 0.7);
-      background: rgba(10, 10, 20, 0.9);
+    .btn-primary:hover {
+      background: var(--accent-2);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(99,102,241,0.35);
     }
 
-    .btn-ghost:hover { border-color: var(--accent); background: rgba(20, 20, 32, 0.9); }
-
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    .hero-card {
-      border-radius: var(--radius-xl);
-      padding: 22px 22px 20px;
-      background: radial-gradient(circle at top, #10101a 0, #050508 55%);
-      border: 1px solid rgba(90, 90, 120, 0.7);
-      box-shadow: var(--shadow-soft);
-      font-size: 0.88rem;
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-light);
     }
 
-    .hero-card h3 { font-size: 0.95rem; margin-bottom: 10px; }
-
-    .hero-metadata { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-    .hero-metadata span {
-      border-radius: var(--radius-pill);
-      padding: 4px 10px;
-      background: rgba(15, 15, 25, 0.95);
-      border: 1px solid rgba(70, 70, 100, 0.7);
-      font-size: 0.78rem; color: var(--text-soft);
+    .btn-outline:hover {
+      background: var(--bg-card);
+      border-color: var(--accent-border);
+      transform: translateY(-1px);
     }
 
-    main { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr); gap: 32px; }
-    section { margin-bottom: 32px; }
+    .hero-visual {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      min-width: 180px;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-2px);
+    }
+
+    .stat-number {
+      font-size: 28px; font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -1px;
+    }
+
+    .stat-label {
+      font-size: 12px; font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ─── SECTION TITLES ─── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
     .section-title {
-      font-size: 1rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 8px;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
-    .card {
-      border-radius: var(--radius-xl);
-      padding: 20px 18px;
-      background: rgba(13, 13, 20, 0.96);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 520px;
     }
 
-    .card + .card { margin-top: 14px; }
+    .section-header { margin-bottom: 56px; }
 
-    .card-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 6px; gap: 12px;
+    .divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 2px;
+      margin: 14px 0 20px;
     }
 
-    .card-title { font-size: 0.98rem; font-weight: 700; }
-    .card-subtitle { font-size: 0.82rem; color: var(--text-soft); }
+    /* ─── ABOUT ─── */
+    #about { background: var(--bg); }
 
-    .pill-soft {
-      border-radius: var(--radius-pill);
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      color: var(--accent);
-      background: var(--accent-soft);
-      border: 1px solid rgba(79, 140, 255, 0.5);
-      white-space: nowrap;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
     }
 
-    .card-body { font-size: 0.9rem; color: var(--text-soft); margin-top: 10px; }
-
-    .bullet-list { list-style: none; margin-top: 10px; }
-    .bullet-list li { display: flex; align-items: flex-start; gap: 8px; margin-top: 6px; }
-    .bullet-dot {
-      width: 5px; height: 5px; border-radius: 50%;
-      margin-top: 7px; background: rgba(148, 163, 184, 0.9); flex-shrink: 0;
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 18px;
     }
 
-    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .tag {
-      border-radius: var(--radius-pill);
-      padding: 3px 9px;
-      font-size: 0.72rem;
-      color: #e5e7eb;
-      background: rgba(17, 24, 39, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-    }
-    .tag-soft {
-      border-color: rgba(75, 85, 99, 0.7);
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text-soft);
+    .about-text p strong { color: var(--text); }
+
+    .about-focus-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
     }
 
-    .projects-grid { display: flex; flex-direction: column; gap: 12px; }
+    .about-focus-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .focus-icon {
+      width: 28px; height: 28px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-border);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+
+    /* ─── PROJECTS ─── */
+    #projects { background: var(--bg-card); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
 
     .project-card {
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-      background: rgba(9, 9, 16, 0.95);
-      border: 1px solid rgba(45, 55, 72, 0.9);
-      transition: transform var(--transition), box-shadow var(--transition), border var(--transition), background var(--transition);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      opacity: 0;
+      transition: var(--transition);
     }
 
     .project-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
-      background: radial-gradient(circle at top left, #111827 0, #050508 65%);
+      border-color: var(--accent-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
     }
 
-    .project-header { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
-    .project-title { font-size: 0.98rem; font-weight: 800; }
-    .project-role { font-size: 0.78rem; color: var(--text-soft); }
-    .project-body { font-size: 0.88rem; color: var(--text-soft); margin-top: 4px; }
+    .project-card:hover::before { opacity: 1; }
 
-    .project-links { display: flex; align-items: center; gap: 12px; margin-top: 8px; font-size: 0.82rem; }
-    .link-soft { color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
-    .link-soft span { font-size: 0.95em; }
-
-    .two-col-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 6px 14px;
-      margin-top: 8px;
-      font-size: 0.86rem;
-      color: var(--text-soft);
+    .project-card.featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #0d0d1a, #111120);
+      border-color: var(--accent-border);
     }
 
-    .footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(55, 65, 81, 0.8);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 14px;
-      font-size: 0.82rem;
-      color: var(--text-soft);
+    .project-card.featured::before { opacity: 1; }
+
+    .project-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      margin-bottom: 16px;
     }
 
-    .badge-inline {
-      border-radius: var(--radius-pill);
+    .project-status {
+      font-size: 11px; font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-active {
+      background: var(--green-soft);
+      color: var(--green);
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    .status-complete {
+      background: rgba(99,102,241,0.1);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+    }
+
+    .status-wip {
+      background: rgba(245,158,11,0.1);
+      color: #f59e0b;
+      border: 1px solid rgba(245,158,11,0.2);
+    }
+
+    .project-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+
+    .project-title {
+      font-size: 20px; font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+    }
+
+    .project-role {
+      font-size: 12px; font-weight: 500;
+      color: var(--accent);
+      font-family: var(--mono);
+      margin-bottom: 14px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .project-stack {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .stack-badge {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500;
+      color: var(--text-dim);
+      background: var(--bg-card-hover);
+      border: 1px solid var(--border-light);
       padding: 3px 9px;
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      font-size: 0.72rem;
-      color: var(--text-soft);
+      border-radius: 5px;
     }
 
+    .project-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600;
+      color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .project-link:hover { color: var(--accent-2); gap: 10px; }
+
+    .project-highlights {
+      list-style: none;
+      margin: 12px 0 20px;
+      display: grid; gap: 8px;
+    }
+
+    .project-highlights li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 13px; color: var(--text-muted);
+    }
+
+    .project-highlights li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── SKILLS ─── */
+    #skills { background: var(--bg); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: var(--transition);
+    }
+
+    .skill-category:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-2px);
+    }
+
+    .skill-cat-icon { font-size: 24px; margin-bottom: 12px; }
+
+    .skill-cat-name {
+      font-size: 14px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .skill-pills {
+      display: flex; flex-wrap: wrap; gap: 7px;
+    }
+
+    .skill-pill {
+      font-family: var(--mono);
+      font-size: 12px; font-weight: 500;
+      padding: 5px 11px;
+      border-radius: 7px;
+      background: var(--bg-card-hover);
+      border: 1px solid var(--border-light);
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .skill-pill:hover {
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }
+
+    /* ─── EXPERIENCE ─── */
+    #experience { background: var(--bg-card); }
+
+    .timeline { position: relative; }
+
+    .timeline::before {
+      content: '';
+      position: absolute; left: 20px; top: 8px; bottom: 8px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .timeline-item {
+      display: flex; gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .timeline-dot {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--accent-glow);
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; z-index: 1;
+    }
+
+    .timeline-content {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      border-color: var(--accent-border);
+    }
+
+    .timeline-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 6px; flex-wrap: wrap;
+    }
+
+    .timeline-period {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-border);
+      padding: 3px 10px;
+      border-radius: 5px;
+    }
+
+    .timeline-company {
+      font-size: 13px; color: var(--text-muted); font-weight: 500;
+    }
+
+    .timeline-title {
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 6px; letter-spacing: -0.3px;
+    }
+
+    .timeline-subtitle {
+      font-size: 13px; color: var(--text-dim);
+      font-family: var(--mono);
+      margin-bottom: 16px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      display: grid; gap: 8px;
+    }
+
+    .timeline-list li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 14px; color: var(--text-muted);
+    }
+
+    .timeline-list li::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ─── EDUCATION ─── */
+    #education { background: var(--bg); }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      transition: var(--transition);
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+
+    .edu-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-2px);
+    }
+
+    .edu-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+
+    .edu-degree {
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .edu-school {
+      font-size: 13px; color: var(--accent);
+      font-weight: 500; margin-bottom: 4px;
+    }
+
+    .edu-period {
+      font-size: 12px; color: var(--text-dim);
+      font-family: var(--mono);
+    }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--bg-card); }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-text p {
+      font-size: 16px; color: var(--text-muted); line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .contact-links { display: flex; flex-direction: column; gap: 12px; }
+
+    .contact-link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px; font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent-border);
+      transform: translateX(4px);
+    }
+
+    .contact-link-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-border);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+
+    .contact-link-info { flex: 1; }
+
+    .contact-link-label {
+      font-size: 11px; font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-link-value { font-size: 14px; font-weight: 500; color: var(--text); }
+
+    .contact-link-arrow {
+      color: var(--text-dim); font-size: 18px;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover .contact-link-arrow { color: var(--accent); }
+
+    .lang-grid {
+      display: grid; gap: 10px;
+      margin-top: 8px;
+    }
+
+    .lang-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .lang-name { font-size: 14px; font-weight: 600; }
+    .lang-flag { font-size: 18px; }
+
+    .lang-level {
+      font-size: 12px; font-weight: 500;
+      color: var(--text-dim);
+      font-family: var(--mono);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 32px clamp(24px, 5vw, 80px);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: var(--mono);
+      font-size: 13px; color: var(--text-dim);
+    }
+
+    .footer-brand span { color: var(--accent); }
+
+    .footer-links { display: flex; gap: 20px; }
+
+    .footer-links a {
+      font-size: 13px; color: var(--text-dim);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ─── SCROLL PROGRESS ─── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px; z-index: 200;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      header { flex-direction: column; align-items: flex-start; }
-      .hero { grid-template-columns: 1fr; }
-      main { grid-template-columns: 1fr; }
+      .hero-grid, .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      .hero-visual { flex-direction: row; flex-wrap: wrap; }
+      .project-card.featured { grid-column: span 1; }
     }
 
-    @media (max-width: 640px) {
-      .page { padding-inline: 16px; }
-      nav { display: none; }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      section { padding: 72px 0; }
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .fade-in {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1; transform: translateY(0);
     }
   </style>
 </head>
-
 <body>
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div style="display:flex; align-items:center; gap:12px;">
-        <div class="logo-mark">JJ</div>
-        <div>
-          <div style="font-size:0.98rem; font-weight:800;">José Joaquín Jiménez Serrano</div>
-          <div style="font-size:0.82rem; color:var(--text-soft);">
-            Full Stack Developer • Security-Focused • .NET & React Native
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav>
+    <div class="nav-logo">JJ<span>.</span>dev</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to Remote Roles &mdash; Costa Rica / LATAM / US-Friendly
           </div>
-        </div>
-      </div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="pill" style="margin-bottom:10px;">
-          <span class="pill-dot"></span>
-          Open to Remote Roles (Costa Rica / LATAM / US-friendly)
-        </div>
-
-        <h1 class="hero-title">
-          Full Stack Developer focused on secure, scalable systems and real-world mobile/web products.
-        </h1>
-
-        <p class="hero-subtitle">
-          I build security-first applications using React Native, .NET, and SQL Server — combining modern engineering
-          with cybersecurity fundamentals (OWASP, IAM, ISO 27001 concepts). Currently developing <strong>ALERTACR</strong>,
-          a citizen-safety platform with real-time incident reporting, geolocation intelligence, SOS alerts, and AI-assisted recommendations.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">React Native (TypeScript)</span>
-          <span class="tag">.NET / ASP.NET Web API</span>
-          <span class="tag">SQL Server</span>
-          <span class="tag">Secure APIs (JWT, RBAC)</span>
-          <span class="tag tag-soft">Security-first mindset</span>
-        </div>
-
-        <div class="hero-actions">
-          <!-- Replace href with your PDF path once uploaded to this repo -->
-          <a href="#contact" class="btn btn-primary">
-            Contact / CV
-          </a>
-          <a href="#projects" class="btn btn-ghost">
-            View Projects
-          </a>
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <h3>Quick Snapshot</h3>
-        <div class="card-body">
-          <p>
-            • Full Stack Developer specializing in secure backend engineering, scalable APIs, and real-world mobile platforms.<br />
-            • Systems Engineering student at <strong>Universidad Latina de Costa Rica</strong>.<br />
-            • <strong>Cybersecurity Specialization</strong> (Universidad Fidélitas) — security-first development mindset.
+          <h1 class="hero-name">
+            Jose Joaquin<br />
+            <span class="highlight">Jimenez Serrano</span>
+          </h1>
+          <p class="hero-role">
+            <strong>Full Stack Developer</strong> &amp; Cybersecurity Specialist<br />
+            .NET &bull; React Native &bull; SQL Server &bull; AI Integration
           </p>
-
-          <div class="hero-metadata">
-            <span>Based in Costa Rica</span>
-            <span>Open to remote roles</span>
-            <span>C1 English</span>
-            <span>GitHub: <strong>JJoaquin10</strong></span>
+          <p class="hero-desc">
+            I build secure, scalable, and real-world software systems combining backend engineering, mobile development, and cybersecurity fundamentals. Security-first mindset from architecture to deployment.
+          </p>
+          <div class="hero-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">.NET / ASP.NET</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">JWT / RBAC</span>
+            <span class="tag">OWASP</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Azure</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work &#8594;</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
           </div>
         </div>
-      </aside>
-    </section>
-
-    <main>
-      <!-- LEFT COLUMN -->
-      <div>
-        <!-- ABOUT -->
-        <section id="about">
-          <div class="section-title">About Me</div>
-          <div class="card">
-            <div class="card-body">
-              I’m a Full Stack Developer with a security-first mindset, focused on building scalable, maintainable, and real-world applications.
-              I enjoy owning end-to-end systems: architecture, APIs, databases, and modern mobile/web experiences — always applying secure design principles.
-              <br /><br />
-              Core strengths:
-              <ul class="bullet-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>Full Stack Engineering:</strong> React Native (TypeScript), .NET / ASP.NET Web API, JavaScript, and modern architecture patterns.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>Backend & Data:</strong> secure REST APIs, authentication (JWT), RBAC, SQL Server data modeling, and performance-minded database design.</span>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <span><strong>Security-Oriented Development:</strong> OWASP-style thinking, IAM fundamentals, risk analysis, and ISO 27001 concepts applied to software design.</span>
-                </li>
-              </ul>
-            </div>
+        <div class="hero-visual">
+          <div class="stat-card fade-in">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Years Building</div>
           </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-          <div class="section-title">Selected Projects</div>
-          <div class="card">
-            <div class="projects-grid">
-
-              <!-- ALERTACR -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">ALERTACR — Citizen Safety Mobile Platform</div>
-                    <div class="project-role">Full-Stack Lead • React Native & .NET API</div>
-                  </div>
-                  <span class="pill-soft">In Progress</span>
-                </div>
-
-                <p class="project-body">
-                  Citizen-safety mobile platform under active development. Users can report incidents in real time,
-                  trigger SOS emergency alerts, share live location with trusted contacts, and visualize risk through heatmaps.
-                  The roadmap includes AI-assisted incident guidance (PulseAI).
-                </p>
-
-                <div class="tag-row">
-                  <span class="tag">React Native (TypeScript)</span>
-                  <span class="tag">.NET Web API</span>
-                  <span class="tag">SQL Server</span>
-                  <span class="tag tag-soft">JWT</span>
-                  <span class="tag tag-soft">RBAC</span>
-                  <span class="tag tag-soft">Maps & Geolocation</span>
-                </div>
-
-                <div class="project-links">
-                  <span class="link-soft"><span>Repository:</span> coming soon</span>
-                </div>
-              </article>
-
-              <!-- FUNDACIÓN CURRIDABAT -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">Fundación Curridabat — Information Management Platform</div>
-                    <div class="project-role">Full Stack Web Developer • Systems Analyst</div>
-                  </div>
-                  <span class="pill-soft">Social Impact</span>
-                </div>
-
-                <p class="project-body">
-                  Secure full-stack web platform supporting internal operations, program management, and community services.
-                  Built backend workflows, role-based access, and optimized SQL structures to ensure performance and integrity.
-                </p>
-
-                <div class="tag-row">
-                  <span class="tag">React</span>
-                  <span class="tag">.NET</span>
-                  <span class="tag">SQL Server</span>
-                  <span class="tag tag-soft">RBAC</span>
-                  <span class="tag tag-soft">Workflows</span>
-                </div>
-              </article>
-
-              <!-- CYBERSECURITY LABS -->
-              <article class="project-card">
-                <div class="project-header">
-                  <div>
-                    <div class="project-title">Cybersecurity Labs & Simulations</div>
-                    <div class="project-role">Cybersecurity Specialization (Universidad Fidélitas)</div>
-                  </div>
-                  <span class="pill-soft">Security</span>
-                </div>
-
-                <p class="project-body">
-                  Hands-on labs covering network security fundamentals, secure configuration, and web security concepts.
-                  Focused on understanding threats and applying preventive controls to improve system resilience.
-                </p>
-
-                <div class="tag-row">
-                  <span class="tag tag-soft">Security Fundamentals</span>
-                  <span class="tag tag-soft">Secure Configuration</span>
-                  <span class="tag tag-soft">OWASP Concepts</span>
-                  <span class="tag tag-soft">Networking</span>
-                </div>
-              </article>
-
-            </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Projects Shipped</div>
           </div>
-        </section>
+          <div class="stat-card fade-in">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Tech Stacks</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number">AI</div>
+            <div class="stat-label">Integration Focus</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- RIGHT COLUMN -->
-      <aside>
-        <!-- SKILLS -->
-        <section id="skills">
-          <div class="section-title">Skills</div>
-          <div class="card">
-            <div class="card-header">
-              <span class="card-title">Technical Stack</span>
-              <span class="badge-inline">Security-first • Always improving</span>
-            </div>
-
-            <div class="card-body">
-              <strong>Full Stack</strong>
-              <div class="two-col-list">
-                <span>React / React Native (TypeScript)</span>
-                <span>.NET / ASP.NET Web API</span>
-                <span>JavaScript / TypeScript</span>
-                <span>REST APIs</span>
-              </div>
-
-              <br />
-              <strong>Backend & Data</strong>
-              <div class="two-col-list">
-                <span>SQL Server</span>
-                <span>Database Modeling</span>
-                <span>Stored Procedures</span>
-                <span>Authentication (JWT)</span>
-              </div>
-
-              <br />
-              <strong>Security-Oriented Dev</strong>
-              <div class="two-col-list">
-                <span>Secure API Design</span>
-                <span>RBAC / IAM Concepts</span>
-                <span>OWASP Concepts</span>
-                <span>ISO 27001 Concepts</span>
-              </div>
-
-              <br />
-              <strong>Tools</strong>
-              <div class="two-col-list">
-                <span>Git & GitHub</span>
-                <span>Postman / Swagger</span>
-                <span>VS / VS Code</span>
-                <span>CI/CD Basics</span>
-              </div>
-            </div>
+  <!-- ─── ABOUT ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Engineering with a<br /><span style="color:var(--accent)">Security-First</span> mindset</h2>
+          <div class="divider"></div>
+          <div class="about-text">
+            <p>I am a <strong>Full Stack Developer</strong> and Systems Engineering student at <strong>Universidad Latina de Costa Rica</strong>, with a cybersecurity specialization from <strong>Universidad Fidelitas</strong>.</p>
+            <p>I enjoy owning end-to-end systems: architecture, backend APIs, mobile frontends, and database design. My development approach is always <strong>security-first</strong>, applying OWASP, IAM, and ISO 27001 principles from day one.</p>
+            <p>Currently, I am building <strong>ALERTACR</strong> — a citizen-safety platform with real-time incident reporting, geolocation intelligence, SOS alerts, and AI-assisted recommendations (PulseAI).</p>
           </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-          <div class="section-title">Experience</div>
-          <div class="card">
-
-            <div class="card-header">
-              <div>
-                <div class="card-title">Full Stack Web Developer | Systems Analyst</div>
-                <div class="card-subtitle">Fundación Curridabat • Remote</div>
-              </div>
-              <span class="pill-soft">2026 – Present</span>
-            </div>
-
-            <div class="card-body">
-              <ul class="bullet-list">
-                <li><span class="bullet-dot"></span><span>Designed and implemented frontend, backend, and relational database architecture.</span></li>
-                <li><span class="bullet-dot"></span><span>Built backend services for user management and operational workflows.</span></li>
-                <li><span class="bullet-dot"></span><span>Applied security-first practices including role-based access and secure data handling.</span></li>
-                <li><span class="bullet-dot"></span><span>Optimized SQL structures to ensure integrity and performance.</span></li>
-              </ul>
-            </div>
-
-            <div class="card-header" style="margin-top:14px;">
-              <div>
-                <div class="card-title">ALERTACR — Full Stack Developer (Mobile Platform)</div>
-                <div class="card-subtitle">Technical Lead • Team Project</div>
-              </div>
-              <span class="pill-soft">2025 – Present</span>
-            </div>
-
-            <div class="card-body">
-              <ul class="bullet-list">
-                <li><span class="bullet-dot"></span><span>Owned system architecture: mobile frontend, backend APIs, and database design.</span></li>
-                <li><span class="bullet-dot"></span><span>Designed secure authentication and role-based access for the platform.</span></li>
-                <li><span class="bullet-dot"></span><span>Implemented geolocation features and real-time incident reporting foundations.</span></li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section id="education">
-          <div class="section-title">Education</div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">B.Sc. Systems Engineering</div>
-                <div class="card-subtitle">Universidad Latina de Costa Rica</div>
-              </div>
-              <span class="pill-soft">In Progress</span>
-            </div>
-
-            <div class="card-body">
-              Focus on software engineering, databases, networks, operating systems, mobile development, and IT management.
-            </div>
-
-            <div class="card-header" style="margin-top:14px;">
-              <div>
-                <div class="card-title">Cybersecurity Specialization</div>
-                <div class="card-subtitle">Universidad Fidélitas</div>
-              </div>
-              <span class="pill-soft">Completed</span>
-            </div>
-
-            <div class="card-body">
-              Training in cybersecurity fundamentals, risk analysis, and security-first practices aligned with industry frameworks.
-            </div>
-          </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-          <div class="section-title">Contact</div>
-          <div class="card">
-            <div class="card-body">
-              Open to <strong>Junior / Entry-Level</strong> opportunities where software development, security, and scalable systems intersect.
-              <br /><br />
-              <div class="two-col-list">
-                <span><strong>Email:</strong> <a href="mailto:jimenezserranojj03@gmail.com">jimenezserranojj03@gmail.com</a></span>
-                <span><strong>Location:</strong> Heredia, Costa Rica</span>
-                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener">www.linkedin.com/in/joséjoaquínjiménez</a></span>
-                <span><strong>GitHub:</strong> <a href="https://github.com/JJJoaquin10" target="_blank" rel="noopener">@JJJoaquin10</a></span>
-              </div>
-              <br />
-              <span class="badge-inline">.</span>
-            </div>
-          </div>
-        </section>
-      </aside>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>© 2026 José Joaquín Jiménez Serrano.</div>
-      <div class="footer-links">
-        <span class="badge-inline">Building secure, real-world products with .NET, React Native & SQL.</span>
+        </div>
+        <div class="about-right">
+          <div class="section-label" style="margin-top:8px">Engineering Focus</div>
+          <ul class="about-focus-list" style="margin-top:16px">
+            <li><span class="focus-icon">&#9881;</span> Backend Architecture with .NET &amp; Node.js</li>
+            <li><span class="focus-icon">&#128274;</span> Secure API Design (JWT, RBAC, REST)</li>
+            <li><span class="focus-icon">&#128241;</span> Mobile Development with React Native + TypeScript</li>
+            <li><span class="focus-icon">&#128202;</span> SQL Server &amp; Database Engineering</li>
+            <li><span class="focus-icon">&#9729;</span> Cloud &amp; DevOps Fundamentals (Azure, CI/CD)</li>
+            <li><span class="focus-icon">&#128737;</span> Security-first Development (OWASP, IAM, ISO 27001)</li>
+            <li><span class="focus-icon">&#129302;</span> AI Integration &amp; OpenAI APIs</li>
+          </ul>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Selected Work</div>
+        <h2 class="section-title">Projects I have built</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Real-world systems combining backend engineering, mobile development, and cybersecurity principles.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- ALERTACR - Featured -->
+        <div class="project-card featured fade-in">
+          <div class="project-header">
+            <span class="project-icon">&#128681;</span>
+            <span class="project-status status-active">Active Development</span>
+          </div>
+          <div class="project-title">ALERTACR</div>
+          <div class="project-role">Full Stack Lead &mdash; Citizen Safety Platform</div>
+          <p class="project-desc">
+            Real-world citizen-safety mobile platform with real-time incident reporting, geolocation intelligence, SOS emergency alerts, heatmap risk visualization, and AI-assisted recommendations through PulseAI.
+          </p>
+          <ul class="project-highlights">
+            <li>Designed complete system architecture: mobile, backend, and database layers</li>
+            <li>Built secure REST APIs with JWT authentication and role-based access control</li>
+            <li>Implemented real-time geolocation and incident reporting foundations</li>
+            <li>Applied OWASP security practices and cybersecurity principles throughout</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">React Native</span>
+            <span class="stack-badge">TypeScript</span>
+            <span class="stack-badge">.NET Web API</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">JWT</span>
+            <span class="stack-badge">RBAC</span>
+            <span class="stack-badge">Maps API</span>
+            <span class="stack-badge">AI Integration</span>
+          </div>
+          <span class="project-link">Repository coming soon &#8594;</span>
+        </div>
+
+        <!-- Fundacion Curridabat -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-icon">&#127758;</span>
+            <span class="project-status status-complete">Completed</span>
+          </div>
+          <div class="project-title">Fundacion Curridabat</div>
+          <div class="project-role">Full Stack Web Developer &bull; Systems Analyst</div>
+          <p class="project-desc">
+            Secure full-stack web platform supporting internal operations, program management, and community services for a social foundation.
+          </p>
+          <ul class="project-highlights">
+            <li>Designed frontend, backend, and relational database architecture</li>
+            <li>Built backend workflows for user management and operations</li>
+            <li>Implemented role-based access and secure data handling</li>
+            <li>Optimized SQL structures for integrity and performance</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">.NET</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">RBAC</span>
+            <span class="stack-badge">Workflows</span>
+          </div>
+        </div>
+
+        <!-- Barberia -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-icon">&#9986;</span>
+            <span class="project-status status-complete">Completed</span>
+          </div>
+          <div class="project-title">Barberia Management System</div>
+          <div class="project-role">Full Stack Developer</div>
+          <p class="project-desc">
+            Full-stack web application for appointment scheduling, dashboards, and barbershop administration with real-time availability management.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">Node.js</span>
+            <span class="stack-badge">SQL Server</span>
+          </div>
+        </div>
+
+        <!-- AI Projects -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-icon">&#129302;</span>
+            <span class="project-status status-wip">Ongoing</span>
+          </div>
+          <div class="project-title">AI Micro Projects</div>
+          <div class="project-role">AI Developer &bull; Automation</div>
+          <p class="project-desc">
+            Collection of AI integrations and automation experiments: OpenAI chatbot implementations, NLP experiments, and Python automation scripts.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">Python</span>
+            <span class="stack-badge">OpenAI API</span>
+            <span class="stack-badge">NLP</span>
+            <span class="stack-badge">Automation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ─── SKILLS ─── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Tech Stack</div>
+        <h2 class="section-title">Technologies I work with</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#9881;</div>
+          <div class="skill-cat-name">Backend</div>
+          <div class="skill-pills">
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">.NET</span>
+            <span class="skill-pill">ASP.NET Web API</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#128241;</div>
+          <div class="skill-cat-name">Frontend &amp; Mobile</div>
+          <div class="skill-pills">
+            <span class="skill-pill">React Native</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#128202;</div>
+          <div class="skill-cat-name">Database</div>
+          <div class="skill-pills">
+            <span class="skill-pill">SQL Server</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Entity Framework</span>
+            <span class="skill-pill">Stored Procedures</span>
+            <span class="skill-pill">Database Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#128737;</div>
+          <div class="skill-cat-name">Cybersecurity</div>
+          <div class="skill-pills">
+            <span class="skill-pill">OWASP Top 10</span>
+            <span class="skill-pill">JWT</span>
+            <span class="skill-pill">RBAC</span>
+            <span class="skill-pill">IAM</span>
+            <span class="skill-pill">SSL/TLS</span>
+            <span class="skill-pill">ISO 27001</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#9729;</div>
+          <div class="skill-cat-name">Cloud &amp; DevOps</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Azure App Service</span>
+            <span class="skill-pill">Azure Functions</span>
+            <span class="skill-pill">GitHub Actions</span>
+            <span class="skill-pill">CI/CD</span>
+            <span class="skill-pill">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-cat-icon">&#129302;</div>
+          <div class="skill-cat-name">AI &amp; Tools</div>
+          <div class="skill-pills">
+            <span class="skill-pill">OpenAI API</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">NLP</span>
+            <span class="skill-pill">Automation</span>
+            <span class="skill-pill">Postman</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Where I have worked</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">&#127758;</div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">2026 &mdash; Present</span>
+              <span class="timeline-company">Fundacion Curridabat &bull; Remote</span>
+            </div>
+            <div class="timeline-title">Full Stack Web Developer &mdash; Systems Analyst</div>
+            <div class="timeline-subtitle">React &bull; .NET &bull; SQL Server</div>
+            <ul class="timeline-list">
+              <li>Designed and implemented frontend, backend, and relational database architecture</li>
+              <li>Built backend services for user management and operational workflows</li>
+              <li>Applied security-first practices including RBAC and secure data handling</li>
+              <li>Optimized SQL structures to ensure data integrity and performance</li>
+              <li>Collaborated with stakeholders to translate business requirements into scalable solutions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">&#128681;</div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">2025 &mdash; Present</span>
+              <span class="timeline-company">ALERTACR &bull; Technical Lead</span>
+            </div>
+            <div class="timeline-title">Full Stack Developer &mdash; Mobile Platform</div>
+            <div class="timeline-subtitle">React Native &bull; .NET Web API &bull; SQL Server</div>
+            <ul class="timeline-list">
+              <li>Owned complete system architecture: mobile frontend, backend APIs, and database design</li>
+              <li>Designed secure authentication and role-based access control for the platform</li>
+              <li>Implemented geolocation features and real-time incident reporting foundations</li>
+              <li>Led team collaboration and technical decision-making for the product roadmap</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─── -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Education</div>
+        <h2 class="section-title">Academic Background</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="edu-grid">
+
+        <div class="edu-card fade-in">
+          <div class="edu-icon">&#127891;</div>
+          <div>
+            <div class="edu-degree">Bachelor's in Systems Engineering</div>
+            <div class="edu-school">Universidad Latina de Costa Rica</div>
+            <div class="edu-period">In Progress &bull; Expected 2027</div>
+          </div>
+        </div>
+
+        <div class="edu-card fade-in">
+          <div class="edu-icon">&#128737;</div>
+          <div>
+            <div class="edu-degree">Cybersecurity Specialization</div>
+            <div class="edu-school">Universidad Fidelitas</div>
+            <div class="edu-period">Completed</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's build something<br /><span style="color:var(--accent)">great together</span></h2>
+          <div class="divider"></div>
+          <p>Open to remote opportunities, freelance projects, and collaborations. If you are building something interesting or looking for a security-focused developer, reach out.</p>
+          <div class="contact-links">
+            <a href="mailto:jimenezserranojj03@gmail.com" class="contact-link">
+              <div class="contact-link-icon">&#9993;</div>
+              <div class="contact-link-info">
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">jimenezserranojj03@gmail.com</div>
+              </div>
+              <span class="contact-link-arrow">&#8250;</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jos%C3%A9joaqu%C3%ADnj%C3%ADmen%C3%A9z" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon">&#128101;</div>
+              <div class="contact-link-info">
+                <div class="contact-link-label">LinkedIn</div>
+                <div class="contact-link-value">Jose Joaquin Jimenez</div>
+              </div>
+              <span class="contact-link-arrow">&#8250;</span>
+            </a>
+            <a href="https://github.com/JJJoaquin10" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon">&#128039;</div>
+              <div class="contact-link-info">
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">@JJJoaquin10</div>
+              </div>
+              <span class="contact-link-arrow">&#8250;</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom:16px">Languages</div>
+          <div class="lang-grid">
+            <div class="lang-item">
+              <span class="lang-flag">&#127464;&#127479;</span>
+              <span class="lang-name">Spanish</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">&#127482;&#127480;</span>
+              <span class="lang-name">English</span>
+              <span class="lang-level">Professional C1</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">&#127463;&#127479;</span>
+              <span class="lang-name">Portuguese</span>
+              <span class="lang-level">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-brand">
+      <span>JJ.dev</span> &mdash; Built with passion in Costa Rica &#127464;&#127479;
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/JJJoaquin10" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+
+    // Fade-in on scroll (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+      });
+    });
+
+    // Smooth stat card entrance on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.stat-card').forEach((card, i) => {
+        setTimeout(() => card.classList.add('visible'), 300 + i * 100);
+      });
+    });
+  </script>
 </body>
 </html>
