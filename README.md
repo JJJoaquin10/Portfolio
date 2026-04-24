@@ -2,18 +2,22 @@
 
 # Jose Joaquin Jimenez Serrano
 
-### Full Stack Developer · Cybersecurity Specialist · AI Developer
+### Full Stack Developer &middot; Cybersecurity Specialist &middot; AI Developer
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-6366f1?style=for-the-badge&logo=github)](https://jjjoaquin10.github.io/Portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jos%C3%A9joaqu%C3%ADnj%C3%ADmen%C3%A9z)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/josejoaquinjimenezs)
 [![Email](https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&logo=gmail)](mailto:jimenezserranojj03@gmail.com)
 [![Open to Work](https://img.shields.io/badge/Status-Open%20to%20Remote%20Roles-10b981?style=for-the-badge)](https://jjjoaquin10.github.io/Portfolio/)
+
+**Heredia, Costa Rica &mdash; Open to Remote / LATAM / US-Friendly roles**
 
 </div>
 
 ---
 
-I design and build **secure, scalable, real-world software systems** combining backend engineering, mobile development, and cybersecurity fundamentals. Security-first mindset — from architecture to deployment.
+Full Stack Developer with **2+ years** delivering production-grade web and mobile applications end-to-end. Core stack: React, React Native, .NET, **Java Spring Boot**, TypeScript, C#, and SQL Server.
+
+Security-first mindset from architecture to deployment &mdash; JWT, RBAC, ISO/IEC 27001 fundamentals, CCNA certified.
 
 ---
 
@@ -21,47 +25,63 @@ I design and build **secure, scalable, real-world software systems** combining b
 
 | Area | Technologies |
 |---|---|
-| **Backend** | C# · .NET · ASP.NET Web API · Node.js · Express |
-| **Mobile / Frontend** | React Native · React · TypeScript · JavaScript |
-| **Database** | SQL Server · PostgreSQL · Entity Framework · Stored Procedures |
-| **Cybersecurity** | OWASP Top 10 · JWT · RBAC · IAM · SSL/TLS · ISO 27001 |
-| **Cloud & DevOps** | Azure App Service · Azure Functions · GitHub Actions · CI/CD |
-| **AI** | OpenAI API · NLP · Python · Automation |
+| **Backend** | C# &middot; .NET &middot; ASP.NET Web API &middot; Java Spring Boot &middot; Node.js &middot; Express |
+| **Mobile / Frontend** | React Native &middot; React &middot; TypeScript &middot; JavaScript &middot; Tailwind CSS |
+| **Database** | SQL Server &middot; PostgreSQL &middot; Entity Framework &middot; E-R Modeling &middot; Query Optimization |
+| **Cybersecurity** | OWASP Top 10 &middot; JWT &middot; RBAC &middot; IAM &middot; ISO/IEC 27001 &middot; NIST &middot; Kali Linux &middot; Wireshark |
+| **Networking** | TCP/IP &middot; CCNA Routing & Switching &middot; Wireless Essentials &middot; SSL/TLS |
+| **Cloud & DevOps** | Azure App Service &middot; Azure Functions &middot; GitHub Actions &middot; CI/CD &middot; Scrum/Kanban |
+| **AI** | OpenAI API &middot; NLP &middot; Python &middot; Automation |
 
 ---
 
-## Flagship Project — ALERTACR
+## Flagship Project &mdash; ALERTACR
 
-**Role:** Full Stack Lead · Technical Lead  
-**Stack:** React Native (TypeScript) · .NET Web API · SQL Server · AI Integration
+**Role:** Lead Full Stack Developer &middot; Sole Developer across all phases  
+**Stack:** React Native (TypeScript) &middot; .NET / C# &middot; SQL Server &middot; JWT &middot; RBAC  
+**Since:** May 2025 &mdash; Active
 
-Real-world citizen-safety mobile platform with real-time incident reporting, geolocation intelligence, SOS emergency alerts, heatmap risk visualization, and AI-assisted emergency recommendations (**PulseAI**).
+> Featured by Universidad Latina de Costa Rica &mdash; 17 reactions, 178 shares
 
-**My Contributions:**
-- Designed complete system architecture: mobile frontend, backend APIs, and database
-- Built secure REST APIs with JWT authentication and role-based access control
-- Implemented real-time geolocation and incident reporting foundations
-- Applied OWASP security practices and cybersecurity principles throughout
+Real-world citizen-safety mobile platform with real-time incident reporting, live geolocation, SOS emergency alerts, heatmap risk visualization, and AI-assisted emergency recommendations (PulseAI).
+
+**Key Contributions:**
+- Architected full application from zero to production as sole developer
+- Built RESTful API layer with JWT and RBAC securing all sensitive endpoints
+- Designed normalized SQL Server database for real-time geolocation and SOS workflows
+- Led full Agile development cycles using Git branching workflows
 
 ---
 
 ## Projects
 
-### Fundacion Curridabat — Information Management Platform
-**Role:** Full Stack Web Developer · Systems Analyst  
-**Stack:** React · .NET · SQL Server
+### Fundacion Curridabat &mdash; Information Management Platform
+**Role:** Full Stack Developer &middot; Systems Analyst &middot; Jan&ndash;Mar 2026  
+**Stack:** React &middot; Java Spring Boot &middot; SQL Server &middot; Tailwind CSS
 
-Secure full-stack web platform supporting internal operations, program management, and community services. Designed frontend, backend, and relational database architecture with role-based access and optimized SQL structures.
+> ~247 development hours &middot; 0 critical defects at deployment
+
+Complete internal web platform for operational management, user administration, and educational content. Designed frontend, backend, and relational database architecture. Delivered production-ready and handed off to client with full system stability.
 
 ### Barberia Management System
-**Stack:** React · Node.js · SQL Server
+**Stack:** React &middot; Node.js &middot; SQL Server
 
-Full-stack web application for appointment scheduling, dashboards, and barbershop administration.
+Full-stack appointment scheduling and administration system.
 
 ### AI Micro Projects
-**Stack:** Python · OpenAI API · NLP
+**Stack:** Python &middot; OpenAI API &middot; NLP
 
 OpenAI chatbot integrations, NLP experiments, and automation scripts.
+
+---
+
+## Certifications
+
+| Certification | Issuer | Date |
+|---|---|---|
+| CCNA: Switching, Routing & Wireless Essentials | Cisco Networking Academy | Dec. 2025 |
+| CCNA: Introduction to Networks | Cisco Networking Academy | Jan. 2022 |
+| Specialization in Cybersecurity | Universidad Fidelitas | Mar. 2025 |
 
 ---
 
@@ -69,8 +89,8 @@ OpenAI chatbot integrations, NLP experiments, and automation scripts.
 
 | Degree | Institution | Status |
 |---|---|---|
-| Bachelor's in Systems Engineering | Universidad Latina de Costa Rica | In Progress |
-| Cybersecurity Specialization | Universidad Fidelitas | Completed |
+| Bachelor's in Systems Engineering | Universidad Latina de Costa Rica | Expected Q3 2026 |
+| Specialization in Cybersecurity | Universidad Fidelitas | Completed &middot; 96h |
 
 ---
 
@@ -87,11 +107,12 @@ OpenAI chatbot integrations, NLP experiments, and automation scripts.
 ## Contact
 
 - **Email:** jimenezserranojj03@gmail.com
-- **LinkedIn:** [linkedin.com/in/josejoaquinjimenez](https://www.linkedin.com/in/jos%C3%A9joaqu%C3%ADnj%C3%ADmen%C3%A9z)
+- **LinkedIn:** [linkedin.com/in/josejoaquinjimenezs](https://www.linkedin.com/in/josejoaquinjimenezs)
 - **Portfolio:** [jjjoaquin10.github.io/Portfolio](https://jjjoaquin10.github.io/Portfolio/)
+- **Location:** Heredia, Costa Rica
 
 ---
 
 <div align="center">
-  <sub>Built with passion in Costa Rica 🇨🇷</sub>
+  <sub>Built with passion in Costa Rica &#127464;&#127479; &mdash; Open to Full Stack, Software Engineer, and Security-focused roles</sub>
 </div>
