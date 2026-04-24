@@ -1,118 +1,97 @@
-# 👋 Hi, I'm José Joaquín Jiménez Serrano
+<div align="center">
 
-🚀 **Full Stack Developer | Cybersecurity Specialist & DevOps Enthusiast | .NET · React Native · SQL
+# Jose Joaquin Jimenez Serrano
 
-I design and build secure, scalable and real-world software systems combining backend engineering, cybersecurity principles, and modern mobile/web development.
+### Full Stack Developer · Cybersecurity Specialist · AI Developer
 
----
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-6366f1?style=for-the-badge&logo=github)](https://jjjoaquin10.github.io/Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jos%C3%A9joaqu%C3%ADnj%C3%ADmen%C3%A9z)
+[![Email](https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&logo=gmail)](mailto:jimenezserranojj03@gmail.com)
+[![Open to Work](https://img.shields.io/badge/Status-Open%20to%20Remote%20Roles-10b981?style=for-the-badge)](https://jjjoaquin10.github.io/Portfolio/)
 
-## 🧠 Engineering Focus
-
-- Backend Architecture with .NET & Node.js
-- Secure API Design (JWT, RBAC, REST)
-- Mobile Development with React Native + TypeScript
-- SQL Server Database Engineering
-- Cloud & DevOps fundamentals
-- Security-first development (OWASP, IAM, ISO 27001 concepts)
+</div>
 
 ---
 
-## 🔥 Flagship Project — ALERTACR
-
-**Role:** Lead Full Stack Developer  
-**Stack:** React Native · Node.js · .NET Web API · SQL Server · AI Integration
-
-ALERTACR is a real-world citizen safety platform currently under active development, focused on secure real-time incident reporting, geolocation intelligence, and AI-assisted emergency response.
-
-### Key Features
-
-🆘 SOS Emergency Alerts  
-📍 Real-time geolocation tracking  
-🗺 Heatmap incident visualization  
-🔐 Secure authentication & role-based access  
-📝 Incident reporting system  
-🤖 AI-assisted incident recommendations (PulseAI)
-
-### My Contributions
-
-- Designed complete system architecture (Frontend + Backend + DB)
-- Built secure REST APIs with authentication
-- Designed relational database models and stored procedures
-- Implemented geolocation and realtime updates
-- Applied secure coding and cybersecurity practices
+I design and build **secure, scalable, real-world software systems** combining backend engineering, mobile development, and cybersecurity fundamentals. Security-first mindset — from architecture to deployment.
 
 ---
 
-### 🌐 Fundación Curridabat — Information Management Platform
-**Role:** Full Stack Web Developer | Systems Analyst  
+## Engineering Focus
+
+| Area | Technologies |
+|---|---|
+| **Backend** | C# · .NET · ASP.NET Web API · Node.js · Express |
+| **Mobile / Frontend** | React Native · React · TypeScript · JavaScript |
+| **Database** | SQL Server · PostgreSQL · Entity Framework · Stored Procedures |
+| **Cybersecurity** | OWASP Top 10 · JWT · RBAC · IAM · SSL/TLS · ISO 27001 |
+| **Cloud & DevOps** | Azure App Service · Azure Functions · GitHub Actions · CI/CD |
+| **AI** | OpenAI API · NLP · Python · Automation |
+
+---
+
+## Flagship Project — ALERTACR
+
+**Role:** Full Stack Lead · Technical Lead  
+**Stack:** React Native (TypeScript) · .NET Web API · SQL Server · AI Integration
+
+Real-world citizen-safety mobile platform with real-time incident reporting, geolocation intelligence, SOS emergency alerts, heatmap risk visualization, and AI-assisted emergency recommendations (**PulseAI**).
+
+**My Contributions:**
+- Designed complete system architecture: mobile frontend, backend APIs, and database
+- Built secure REST APIs with JWT authentication and role-based access control
+- Implemented real-time geolocation and incident reporting foundations
+- Applied OWASP security practices and cybersecurity principles throughout
+
+---
+
+## Projects
+
+### Fundacion Curridabat — Information Management Platform
+**Role:** Full Stack Web Developer · Systems Analyst  
 **Stack:** React · .NET · SQL Server
 
-Developed a secure full-stack web platform supporting internal operations, program management, and community services.
+Secure full-stack web platform supporting internal operations, program management, and community services. Designed frontend, backend, and relational database architecture with role-based access and optimized SQL structures.
 
-Key Contributions:
-
-- Designed frontend, backend, and relational database architecture
-- Built backend services for user management and workflows
-- Implemented secure data handling and role-based access
-- Designed optimized SQL structures ensuring integrity and performance
-- Collaborated with stakeholders translating business requirements into scalable solutions
-
-## 💻 Additional Projects
-
-### Barbería Management System
-Full-stack web application for appointments, dashboards and administration.
-
+### Barberia Management System
 **Stack:** React · Node.js · SQL Server
 
+Full-stack web application for appointment scheduling, dashboards, and barbershop administration.
+
 ### AI Micro Projects
-- OpenAI chatbot integrations
-- NLP experiments
-- Automation scripts in Python
+**Stack:** Python · OpenAI API · NLP
+
+OpenAI chatbot integrations, NLP experiments, and automation scripts.
 
 ---
 
-## 🛠 Tech Stack
+## Education
 
-### Backend
-C# · .NET · ASP.NET Web API · Node.js · Express
-
-### Frontend
-React · React Native · TypeScript · JavaScript · HTML5
-
-### Database
-SQL Server · PostgreSQL · Entity Framework · Stored Procedures
-
-### Cloud & DevOps
-Azure App Service · Azure Functions · GitHub Actions · CI/CD basics
-
-### Cybersecurity
-Secure APIs · OWASP Top 10 · IAM · SSL/TLS · WAF Concepts
+| Degree | Institution | Status |
+|---|---|---|
+| Bachelor's in Systems Engineering | Universidad Latina de Costa Rica | In Progress |
+| Cybersecurity Specialization | Universidad Fidelitas | Completed |
 
 ---
 
-## 🎓 Education
+## Languages
 
-**Bachelor’s Degree – Systems Engineering**  
-Universidad Latina de Costa Rica (In progress)
-
-**Cybersecurity Specialization**  
-Universidad Fidélitas
-
----
-
-## 🌎 Languages
-
-Spanish — Native  
-English — Professional (C1)  
-Portuguese — Basic
+| Language | Level |
+|---|---|
+| Spanish | Native |
+| English | Professional (C1) |
+| Portuguese | Basic |
 
 ---
 
-## 📫 Contact
+## Contact
 
-LinkedIn: https://www.linkedin.com/in/joséjoaquínjímenéz  
-Email: jimenezserranojj03@gmail.com
+- **Email:** jimenezserranojj03@gmail.com
+- **LinkedIn:** [linkedin.com/in/josejoaquinjimenez](https://www.linkedin.com/in/jos%C3%A9joaqu%C3%ADnj%C3%ADmen%C3%A9z)
+- **Portfolio:** [jjjoaquin10.github.io/Portfolio](https://jjjoaquin10.github.io/Portfolio/)
 
 ---
 
-⭐ *Thanks for visiting my engineering portfolio.*
+<div align="center">
+  <sub>Built with passion in Costa Rica 🇨🇷</sub>
+</div>
