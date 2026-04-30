@@ -30,7 +30,7 @@ Security-first mindset from architecture to deployment &mdash; JWT, RBAC, ISO/IE
 | **Database** | SQL Server &middot; PostgreSQL &middot; Entity Framework &middot; E-R Modeling &middot; Query Optimization |
 | **Cybersecurity** | OWASP Top 10 &middot; JWT &middot; RBAC &middot; IAM &middot; ISO/IEC 27001 &middot; NIST &middot; Kali Linux &middot; Wireshark |
 | **Networking** | TCP/IP &middot; CCNA Routing & Switching &middot; Wireless Essentials &middot; SSL/TLS |
-| **Cloud & DevOps** | Azure App Service &middot; Azure Functions &middot; GitHub Actions &middot; CI/CD &middot; Scrum/Kanban |
+| **Cloud & DevOps** | Azure App Service &middot; Azure Functions &middot; GitHub Actions &middot; CI/CD &middot; Docker &middot; Kubernetes &middot; Terraform &middot; Scrum/Kanban |
 | **AI** | OpenAI API &middot; NLP &middot; Python &middot; Automation |
 
 ---
@@ -98,9 +98,9 @@ OpenAI chatbot integrations, NLP experiments, and automation scripts.
 
 | Language | Level |
 |---|---|
-| Spanish | Native |
-| English | Professional (C1) |
-| Portuguese | Basic |
+| **Spanish** | Native |
+| **English** | C1 – Full Professional |
+| **Portuguese** | Elementary |
 
 ---
 
