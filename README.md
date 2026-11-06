@@ -1,118 +1,88 @@
-<div align="center">
+# José Joaquín Jiménez Serrano
 
-# Jose Joaquin Jimenez Serrano
+### Software Developer · Full Stack Web & Mobile
 
-### Full Stack Developer &middot; Cybersecurity Specialist &middot; AI Developer
+[Portfolio](https://jjjoaquin10.github.io/Portfolio/) · [LinkedIn](https://www.linkedin.com/in/josejoaquinjimenezs/) · [Email](mailto:jimenezserranojj03@gmail.com)
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-6366f1?style=for-the-badge&logo=github)](https://jjjoaquin10.github.io/Portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/josejoaquinjimenezs)
-[![Email](https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&logo=gmail)](mailto:jimenezserranojj03@gmail.com)
-[![Open to Work](https://img.shields.io/badge/Status-Open%20to%20Remote%20Roles-10b981?style=for-the-badge)](https://jjjoaquin10.github.io/Portfolio/)
+**Heredia, Costa Rica**
 
-**Heredia, Costa Rica &mdash; Open to Remote / LATAM / US-Friendly roles**
+I build web and mobile applications, connecting user interfaces, REST APIs, and relational data models. My cybersecurity background informs how I approach authentication, authorization, and input validation.
 
-</div>
+This repository contains my personal portfolio, with selected projects, development experience, and training.
 
----
+## Development Focus
 
-Full Stack Developer with **2+ years** delivering production-grade web and mobile applications end-to-end. Core stack: React, React Native, .NET, **Java Spring Boot**, TypeScript, C#, and SQL Server.
-
-Security-first mindset from architecture to deployment &mdash; JWT, RBAC, ISO/IEC 27001 fundamentals, CCNA certified.
-
----
-
-## Engineering Focus
-
-| Area | Technologies |
+| Area | Technologies and practices |
 |---|---|
-| **Backend** | C# &middot; .NET &middot; ASP.NET Web API &middot; Java Spring Boot &middot; Node.js &middot; Express |
-| **Mobile / Frontend** | React Native &middot; React &middot; TypeScript &middot; JavaScript &middot; Tailwind CSS |
-| **Database** | SQL Server &middot; PostgreSQL &middot; Entity Framework &middot; E-R Modeling &middot; Query Optimization |
-| **Cybersecurity** | OWASP Top 10 &middot; JWT &middot; RBAC &middot; IAM &middot; ISO/IEC 27001 &middot; NIST &middot; Kali Linux &middot; Wireshark |
-| **Networking** | TCP/IP &middot; CCNA Routing & Switching &middot; Wireless Essentials &middot; SSL/TLS |
-| **Cloud & DevOps** | Azure App Service &middot; Azure Functions &middot; GitHub Actions &middot; CI/CD &middot; Docker &middot; Kubernetes &middot; Terraform &middot; Scrum/Kanban |
-| **AI** | OpenAI API &middot; NLP &middot; Python &middot; Automation |
+| Frontend & mobile | React, React Native, TypeScript, JavaScript, Tailwind CSS |
+| Backend | C#, .NET, Java Spring Boot, Node.js, Express, REST APIs |
+| Data | SQL Server, relational modeling, Entity Framework |
+| Application security | JWT, role-based access control, input validation, OWASP fundamentals |
+| Engineering workflow | Git, functional testing, regression testing, technical documentation |
 
----
+I also explore AI-assisted development and practical AI integrations, with an emphasis on reviewing and testing the resulting code.
 
-## Flagship Project &mdash; ALERTACR
+## Selected Projects
 
-**Role:** Lead Full Stack Developer &middot; Sole Developer across all phases  
-**Stack:** React Native (TypeScript) &middot; .NET / C# &middot; SQL Server &middot; JWT &middot; RBAC  
-**Since:** May 2025 &mdash; Active
+### ALERTACR — Citizen-Safety Mobile Application
 
-> Featured by Universidad Latina de Costa Rica &mdash; 17 reactions, 178 shares
+**Role:** Lead Full Stack Developer · May 2025–June 2026  
+**Stack:** React Native, TypeScript, C#/.NET, SQL Server, JWT, RBAC
 
-Real-world citizen-safety mobile platform with real-time incident reporting, live geolocation, SOS emergency alerts, heatmap risk visualization, and AI-assisted emergency recommendations (PulseAI).
+A mobile application with incident reporting, geolocation, and SOS workflows.
 
-**Key Contributions:**
-- Architected full application from zero to production as sole developer
-- Built RESTful API layer with JWT and RBAC securing all sensitive endpoints
-- Designed normalized SQL Server database for real-time geolocation and SOS workflows
-- Led full Agile development cycles using Git branching workflows
+- Developed the mobile interface and REST APIs.
+- Implemented JWT authentication and role-based access control.
+- Designed relational data models for incident reports, geolocation events, and emergency alerts.
+- Integrated geolocation services and documented the application using Git-based version control.
 
----
+[Featured by Universidad Latina de Costa Rica](https://www.linkedin.com/feed/update/urn:li:activity:7425287481962508288/)
 
-## Projects
+### Fundación Curridabat — Information Management Platform
 
-### Fundacion Curridabat &mdash; Information Management Platform
-**Role:** Full Stack Developer &middot; Systems Analyst &middot; Jan&ndash;Mar 2026  
-**Stack:** React &middot; Java Spring Boot &middot; SQL Server &middot; Tailwind CSS
+**Role:** Full Stack Developer · January–March 2026  
+**Stack:** React, Java Spring Boot, SQL Server, Tailwind CSS
 
-> ~247 development hours &middot; 0 critical defects at deployment
+An internal web platform for operational management, user administration, and educational content.
 
-Complete internal web platform for operational management, user administration, and educational content. Designed frontend, backend, and relational database architecture. Delivered production-ready and handed off to client with full system stability.
+- Built REST APIs using controllers, services, and DTOs.
+- Developed responsive interfaces with CRUD operations and form validation.
+- Modeled the relational database and implemented role-based access control.
+- Performed functional and regression testing and prepared the system for handoff.
 
-### Barberia Management System
-**Stack:** React &middot; Node.js &middot; SQL Server
+### Barbería Management System
 
-Full-stack appointment scheduling and administration system.
+An appointment scheduling and administration project. Further details are available in the portfolio.
 
-### AI Micro Projects
-**Stack:** Python &middot; OpenAI API &middot; NLP
+### AI Learning & Experiments
 
-OpenAI chatbot integrations, NLP experiments, and automation scripts.
+Exploration of Python, OpenAI API integrations, NLP, and automation.
 
----
+## Education & Training
 
-## Certifications
-
-| Certification | Issuer | Date |
+| Program | Institution | Status / date |
 |---|---|---|
-| CCNA: Switching, Routing & Wireless Essentials | Cisco Networking Academy | Dec. 2025 |
-| CCNA: Introduction to Networks | Cisco Networking Academy | Jan. 2022 |
-| Specialization in Cybersecurity | Universidad Fidelitas | Mar. 2025 |
+| Bachelor's Degree in Information Systems Engineering | Universidad Latina de Costa Rica | In progress — final year |
+| Specialization in Cybersecurity | Universidad Fidélitas | Completed, March 2025 |
+| CCNA: Switching, Routing & Wireless Essentials | Cisco Networking Academy | December 2025 |
+| CCNA: Introduction to Networks | Cisco Networking Academy | January 2022 |
 
----
-
-## Education
-
-| Degree | Institution | Status |
-|---|---|---|
-| Bachelor's in Systems Engineering | Universidad Latina de Costa Rica | Expected Q3 2026 |
-| Specialization in Cybersecurity | Universidad Fidelitas | Completed &middot; 96h |
-
----
+The Cisco entries refer to Networking Academy courses.
 
 ## Languages
 
-| Language | Level |
-|---|---|
-| **Spanish** | Native |
-| **English** | C1 – Full Professional |
-| **Portuguese** | Elementary |
+- Spanish: native
+- English: C1
+- Portuguese: elementary
 
----
+## Portfolio Website
+
+The website is maintained in index.html and published through GitHub Pages.
+
+**Live site:** https://jjjoaquin10.github.io/Portfolio/
 
 ## Contact
 
-- **Email:** jimenezserranojj03@gmail.com
-- **LinkedIn:** [linkedin.com/in/josejoaquinjimenezs](https://www.linkedin.com/in/josejoaquinjimenezs)
-- **Portfolio:** [jjjoaquin10.github.io/Portfolio](https://jjjoaquin10.github.io/Portfolio/)
+- **Email:** [jimenezserranojj03@gmail.com](mailto:jimenezserranojj03@gmail.com)
+- **LinkedIn:** [José Joaquín Jiménez Serrano](https://www.linkedin.com/in/josejoaquinjimenezs/)
 - **Location:** Heredia, Costa Rica
-
----
-
-<div align="center">
-  <sub>Built with passion in Costa Rica &#127464;&#127479; &mdash; Open to Full Stack, Software Engineer, and Security-focused roles</sub>
-</div>
